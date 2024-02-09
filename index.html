@@ -16,30 +16,31 @@
 
             <div class="col-auto col-md-3 col-xl-3 px-sm-2 px-0 bg-dark">
                 <div class="d-flex flex-column align-items-center  px-3 pt-2 text-white min-vh-100">
-                    <p class="mt-5 fs-3 align-items-center">My shortened URL's</p>
+                    <p class="mt-5 fs-3 align-items-center">My shortened URL's : </p>
+                    <div id="urlList"></div>
                 </div>
             </div>
 
             <div class="col-auto col-md-6 col-xl-6">
-                <form action="" class="d-flex flex-column align-items-center px-3 pt-2 min-vh-100">
+                <div class="d-flex flex-column align-items-center px-3 pt-2 min-vh-100">
                     <p class="mt-5 fs-2 align-items-center fw-bold">URL Shortener</p>
-                    <input type="url" class="form-control w-50  mt-2" id="url" placeholder="Paste the URL to be shortened">
-                    <button type="submit" class="btn btn-primary mt-3">Shorten URL</button>
-                </form>
+                    <div id="errorMessage" style="color: red;"></div>
+                    <input type="url" class="form-control w-50  mt-2" id="originalUrl" placeholder="Paste the URL to be shortened">
+                    <button onclick="shortenUrl()" class="btn btn-primary mt-3">Shorten URL</button>
+                </div>
             </div>
 
             <div class="col-auto col-md-3 col-xl-3">
                 <div class="d-flex flex-column align-items-center px-3 pt-2 min-vh-100">
                     <select class="form-select select" id="expiration">
-                        <option value="" disabled selected>Add expiration date</option>
-                        <option value="1m">1 minute</option>
-                        <option value="5m">5 minutes</option>
-                        <option value="30m">30 minutes</option>
-                        <option value="1h">1 hour</option>
-                        <option value="5h">5 hours</option>
+                        <option value="60000">1 minute</option>
+                        <option value="300000">5 minutes</option>
+                        <option value="1800000">30 minutes</option>
+                        <option value="3600000">1 hour</option>
+                        <option value="18000000">5 hours</option>
+                        <option value="86400000">24 hours</option>
                     </select>
                 </div>
-
             </div>
 
         </div>
